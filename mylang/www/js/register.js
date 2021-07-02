@@ -13,7 +13,7 @@ $(function () {
             var datalist = "inputEmail=" + email + "&inputPassword=" + pass1;
             $.ajax({
                 type: "post",
-                url: "http://192.168.1.7:9999/group4/Register",
+                url: "http://192.168.0.135:8080/group4/Register",
                 data: datalist,
                 cache: false,
                 success: function (mydata) {

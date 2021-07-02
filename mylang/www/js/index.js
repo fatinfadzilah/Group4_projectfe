@@ -48,7 +48,7 @@ var link11 = crossroads.addRoute("/mymemory", function () {
     var datalist = "email=" + email;
     $.ajax({
         type: "post",
-        url: "http://192.168.1.7:9999/group4/GetMemoryData",
+        url: "http://192.168.0.135:8080/group4/GetMemoryData",
         data: datalist,
         cache: false,
         success: function (mydata) {
@@ -94,7 +94,7 @@ var link5 = crossroads.addRoute("/viewmemory/{id}", function (id) {
     var datalist = "id=" + id;
     $.ajax({
         type: "post",
-        url: "http://192.168.1.7:9999/group4/GetMemoryDataById",
+        url: "http://192.168.0.135:8080/group4/GetMemoryDataById",
         data: datalist,
         cache: false,
         success: function (mydata) {
@@ -135,7 +135,7 @@ $("#frmAddMemory").submit(function (e) {
     var datalist = "title=" + title + " &category=" + category + "&owneremail=" + sessionStorage.ttoken;
     $.ajax({
         type: "post",
-        url: "http://192.168.1.7:9999/group4/AddMemory",
+        url: "http://192.168.0.135:8080/group4/AddMemory",
         data: datalist,
         cache: false,
         success: function (mydata) {
@@ -166,7 +166,7 @@ $("#frmEditMemory").submit(function (e) {
     var datalist = "title=" + title + " &category=" + category + "&id=" + id;
     $.ajax({
         type: "post",
-        url: "http://192.168.1.7:9999/group4/UpdateMemoryByid",
+        url: "http://192.168.0.135:8080/group4/UpdateMemoryByid",
         data: datalist,
         cache: false,
         success: function (mydata) {
@@ -195,7 +195,7 @@ $("#tblMemory tbody").on("click", "span", function () {
         if (answer) {
             $.ajax({
                 type: "post",
-                url: "http://192.168.1.7:9999/group4/DelMemoryById",
+                url: "http://192.168.0.135:8080/group4/DelMemoryById",
                 data: datalist,
                 cache: false,
                 success: function (mydata) {
@@ -230,7 +230,7 @@ $("#tblMemory tbody").on("click", "span", function () {
     var datalist = "email=" + email;
     $.ajax({
         type: "post",
-        url: "http://192.168.1.7:9999/group4/GetProfileData",
+        url: "http://192.168.0.135:8080/group4/GetProfileData",
         data: datalist,
         cache: false,
         success: function (mydata) {
