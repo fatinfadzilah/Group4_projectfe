@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title>日本語 Nihongo </title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <!-- Custom styles for this template -->
+   <link href="css/navbar-fixed-top.css" rel="stylesheet">
+   <link href="css/memory.css" rel="stylesheet">
+
+   <style>
+      body {
+         background-image: url('img/bg.jpeg');
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+         background-size: cover;
+      }
+   </style>
+</head>
+
+<body>
+   <!-- Fixed navbar -->
+   <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+         <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+               aria-expanded="false" aria-controls="navbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="">日本語</a>
+         </div>
+
+         <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+               <li class="active"><a href="">Home</a></li>
+               <li><a href="#Hiragana">Hiragana</a></li>
+               <li><a href="#mymemory">My Memory</a></li>
+               <li><a href="#about">About</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right" style="background-color: rgb(183, 219, 251);">
+               <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                     aria-expanded="false"><span id="idSpan"> <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                     <li><a href="#profile">Profile</a></li>
+                     <li><a href="#logout">Logout</a></li>
+                  </ul>
+               </li>
+            </ul>
+         </div>
+         <!--/.nav-collapse -->
+      </div>
+   </nav>
+
+   <div class="container">
+      <div class="jumbotron" style="text-align: center;
+      color:rgb(8, 3, 3); background: linear-gradient(to bottom, #66ccff 0%, #ffffff 100%); ">
+         <h1>みんな の 日本語</h1>
+         <h5>Japanese For All</h5>
+      </div>
+      <!-- divHome-->
+      <div class="well" id="divHome" style="display: none;">
+         <div class="row">
+            <h1 style=" text-align:center;font-weight: 900;">Learn</h1>
+            <br>
+            <div class="col-md-6">
+
+               <button class="btn-lg btn-info btn-block" type="submit" id="btncolour" wind> Colour<br>いろ Iro<img
+                     src="img/color.png" width="100%" height="auto"></button><br>
+               <button class="btn-lg btn-info btn-block" type="submit" id="btnfamily">Family <br>かぞく Kazoku<img
+                     src="img/family.png" width="100%" height="auto"></button><br>
+            </div>
+            <div class="col-md-6">
+               <button class="btn-lg btn-info btn-block" type="submit" id="btnnumber">Number <br> かず Kazu <img
+                     src="img/num.png" width="100%" height="auto"></button>
+               <br>
+               <button class="btn-lg btn-info btn-block" type="submit" id="btnfruit">Fruit and Vegetable <br>
+                  くだもの と やさい kudamono to yasai <img src="img/fruit.png" width="100%" height="auto"></button> <br>
+            </div>
+            <br>
+         </div>
+      </div>
+      <!--colour-->
+      <div class="well" id="divColour" style="display: none;">
+         <div class="row">
+            <div class="col-md-6" style="float: none; margin: 0 auto; text-align: center;">
+               <h1 style=" font-weight: 900;">Pronunciation</h1>
+               <h5> Click on button to hear the pronunciation</h5><br>
+
+               <button
+                  style="color: white; background-image:linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);"
+                  type="button" class="btn-lg btn-block" onclick="Colour.play()"> Colour<br />いろ Iro
+               </button><br><br>
+
+               <button style="background-color:orange" type="button" class="btn-lg btn-block" onclick="Orange.play()">
+                  Orange<br />オレンジ Orenji </button><br><br>
+
+               <button style="background-color: blue; color: white;" class="btn-lg btn-block" type="button"
+                  onclick="Blue.play()">Blue<br />あお Ao </button><br><br>
+
+               <button style="background-color: yellow;" class="btn-lg btn-block" type="button" onclick="Yellow.play()">
+                  Yellow<br />きいろ Ki-iro </button><br><br>
+
+               <button style="background-color: red; color: white;" class="btn-lg btn-block" type="button"
+                  onclick="Red.play()">Red<br /> あか Aka </button><br><br>
+
+               <button style="background-color: green;" class="btn-lg btn-block" type="button"
+                  onclick="Green.play()">Green<br />みどり Midori </button><br><br>
+
+               <button style="background-color: Black; color: white;" class="btn-lg btn-block" type="button"
+                  onclick="Black.play()">Black<br />くろ Kuro </button><br><br>
+
+               <button style="background-color: Brown; color: white;" class="btn-lg btn-block" type="button"
+                  onclick="Brown.play()">Brown<br />ちゃいろ Cha-Iro </button><br><br>
+
+               <button style="background-color:  Pink;" class="btn-lg btn-block" type="button"
+                  onclick="Pink.play()">Pink<br />ピンク Pinku </button><br><br>
+
+               <button style="background-color:  Purple; color: white;" class="btn-lg btn-block" type="button"
+                  onclick="Purple.play()"> Purple<br />むらさき Murasaki </button><br><br>
+
+               <button style="background-color:  White;" class="btn-lg btn-block" type="button" onclick="White.play()">
+                  White<br /> しろ Shiro</button><br><br>
+
+            </div>
+         </div>
+      </div>
+      <!--Number-->
+      <div class="well" id="divNumber" style="display: none;">
+         <div class="row">
+            <div class="col-md-6" style="float: none; margin: 0 auto;text-align: center;">
+               <h1 style="font-weight: 900;">Pronunciation</h1>
+               <h5> Click on button to hear the pronunciation</h5><br>
+
+               <button style="background-color: lightskyblue;" type="button" class="btn-lg btn-block"
+                  onclick="Numberpro.play()">Number<br />かず Kazu </button><br><br>
+
+               <button style="background-color: lightskyblue;" type="button" class="btn-lg btn-block"
+                  onclick="One.play()">One<br />いち Ichi </button><br><br>
+
+               <button style="background-color: lightskyblue" class="btn-lg btn-block" type="button"
+                  onclick="Two.play()">Two<br />に Ni</button><br><br>
+
+               <button style="background-color: lightskyblue;" class="btn-lg btn-block" type="button"
+                  onclick="Three.play()">Three<br />さん San </button><br><br>
+
+               <button style="background-color: lightskyblue;" class="btn-lg btn-block" type="button"
+                  onclick="Four.play()">Four<br /> よん Yon </button><br><br>
+
+               <button style="background-color: lightskyblue;" class="btn-lg btn-block" type="button"
+                  onclick="Five.play()">Five<br />ご Go </button><br><br>
+
+               <button style="background-color: lightskyblue;" class="btn-lg btn-block" type="button"
+                  onclick="Six.play()">Six<br />ろく Roku</button><br><br>
+
+               <button style="background-color: lightskyblue;" class="btn-lg btn-block" type="button"
+                  onclick="Seven.play()">Seven<br />なな Nana </button><br><br>
+
+               <button style="background-color: lightskyblue;" class="btn-lg btn-block" type="button"
+                  onclick="Eight.play()">‎‎‏‏‎‏‏‎ Eight<br />はち Hachi </button><br><br>
+
+               <button style="background-color: lightskyblue;" class="btn-lg btn-block" type="button"
+                  onclick="Nine.play()"> Nine<br />きゅう Kyuu</button><br><br>
+
+               <button style="background-color:  lightskyblue;" class="btn-lg btn-block" type="button"
+                  onclick="Ten.play()"> Ten<br />じゅう Juu‎‎‏‏‎‏‏‎ </button><br><br>
+            </div>
+         </div>
+      </div>
+      <!--Family-->
+      <div class="well" id="divfamily" style="display: none;">
+         <div class="row">
+            <div class="col-md-6" style="float: none; margin: 0 auto;text-align: center;">
+               <h1 style="font-weight: 900;">Pronunciation</h1>
+               <h5> Click on button to hear the pronunciation</h5><br>
+
+               <button style="background-color: lightskyblue;" type="button" class="btn-lg btn-block"
+                  onclick="Family.play()">Family<br />かぞく Kazoku </button><br><br>
+
+               <button style="background-color: lightskyblue;" type="button" class="btn-lg btn-block"
+                  onclick="Grandfather.play()">Grandfather <br /> そふ Sofu </button><br><br>
+
+
+               <button style="background-color:  lightskyblue;" class="btn-lg btn-block" type="button"
+                  onclick="Grandmother.play()">Grandmother <br />そぼ Sobo</button><br><br>
+
+
+               <button style="background-color: lightskyblue" class="btn-lg btn-block" type="button"
+                  onclick="Father.play()">Father<br />ちち Chichi </button><br><br>
+
+               <button style="background-color: lightskyblue;" class="btn-lg btn-block" type="button"
+                  onclick="Mother.play()">Mother<br /> はは Haha </button><br><br>
+
+               <button style="background-color: lightskyblue;" class="btn-lg btn-block" type="button"
+                  onclick="ElderBrother.play()">Elder Brother <br /> あに Ani</button><br><br>
+
+               <button style="background-color: lightskyblue;" class="btn-lg btn-block" type="button"
+                  onclick="ElderSister.play()">Elder Sister<br /> あね Ane </button><br><br>
+
+               <button style="background-color: lightskyblue;" class="btn-lg btn-block" type="button"
+                  onclick="YoungerBrother.play()">Younger Brother<br />おとうと Otouto</button><br><br>
+
+               <button style="background-color: lightskyblue;" class="btn-lg btn-block" type="button"
+                  onclick="YoungerSister.play()">Younger Sister<br />いもうと Imouto </button><br><br>
+
+               <button style="background-color: lightskyblue;" class="btn-lg btn-block" type="button"
+                  onclick="Son.play()">‎‎‏‏‎‏‏‎ Son<br />むすこ Musuko </button><br><br>
+
+               <button style="background-color: lightskyblue;" class="btn-lg btn-block" type="button"
+                  onclick="Daughter.play()"> Daughter<br /> むすめ Musume</button><br><br>
+
+            </div>
+         </div>
+      </div>
+      <!--Fruit-->
+      <div class="well" id="divfruit" style="display: none;">
+         <div class="row">
+            <div class="col-md-6" style="float: none; margin: 0 auto;text-align: center;">
+               <h1 style="font-weight: 900;">Pronunciation</h1>
+               <h5> Click on button to hear the pronunciation</h5><br>
+
+               <button style="background-color: lightskyblue;" type="button" class="btn-lg btn-block"
+                  onclick="FruitandVegetable.play()">Fruit and Vegetable<br />くだもの と やさい Kudamono to yasai
+               </button><br><br>
+
+               <button style="background-color: lightskyblue;" type="button" class="btn-lg btn-block"
+                  onclick="Watermelon.play()">Watermelon <br />すいか Suika</button><br><br>
+
+
+               <button style="background-color:  lightskyblue;" class="btn-lg btn-block" type="button"
+                  onclick="Apple.play()">Apple <br />りんご Ringo</button><br><br>
+
+
+               <button style="background-color: lightskyblue" class="btn-lg btn-block" type="button"
+                  onclick="Coconut.play()">Coconut<br />ココナッ Kokonattsu </button><br><br>
+
+               <button style="background-color: lightskyblue;" class="btn-lg btn-block" type="button"
+                  onclick="Grape.play()">Grape<br />ぶどう Budou</button><br><br>
+
+               <button style="background-color: lightskyblue;" class="btn-lg btn-block" type="button"
+                  onclick="Peach.play()">Peach <br />もも Momo </button><br><br>
+
+               <button style="background-color: lightskyblue;" class="btn-lg btn-block" type="button"
+                  onclick="Onion.play()">Onion<br />たまねぎ Tamanegi</button><br><br>
+
+               <button style="background-color: lightskyblue;" class="btn-lg btn-block" type="button"
+                  onclick="Pumpkin.play()">Pumpkin<br />かぼちゃ Kabocha</button><br><br>
+
+               <button style="background-color: lightskyblue;" class="btn-lg btn-block" type="button"
+                  onclick="Carrot.play()">Carrot<br />にんじん Ninjin</button><br><br>
+
+               <button style="background-color: lightskyblue;" class="btn-lg btn-block" type="button"
+                  onclick="Potato.play()">‎‎‏‏‎‏‏‎ Potato<br />じゃがいも Jagaimo</button><br><br>
+
+               <button style="background-color: lightskyblue;" class="btn-lg btn-block" type="button"
+                  onclick="Cucumber.play()">Cucumber<br />きゅうり Kyuuri</button><br><br>
+
+            </div>
+         </div>
+      </div>
+
+      <!--Hiragana-->
+      <div class="well" id="divHiragana" style="overflow-x: auto;">
+         <div class="col-md-6" style="float: none; margin: 0 auto;">
+            <h1 style="text-align: center; font-weight: 900;">Hiragana </h1>
+            <br>
+            <img src="img/hirag.jpeg" alt="Hiragana" class="responsive" height="900px" width="1000px">
+         </div>
+      </div>
+
+      <!--mymemory-->
+      <div class="well" id="divmemory" style="overflow-x: auto;">
+         <div class="row">
+            <div class="col-sm-12">
+               <h1 style="text-align: center; font-weight: 900;">Memory Diary</h1><br>
+               <a class="btn btn-info" href="#btnAddMemory" role="button">Add Memory</a>
+               <p></p>
+               <table class="table table-condensed table-stripped table-hover" id="tblMemory">
+                  <thead>
+                     <tr>
+                        <th>Index</th>
+                        <th>Title</th>
+                        <th>Category</th>
+                        <th>Date</th>
+                        <th>Delete</th>
+                     </tr>
+                  </thead>
+                  <tbody></tbody>
+               </table>
+            </div>
+         </div>
+      </div>
+
+      <!--div add memory form -->
+      <div class="well" id="divAddMemory" style="overflow-x:auto; background-color: rgb(183, 219, 251);">
+            <form id="frmAddMemory">
+               <h1 style="text-align: center; font-weight: 900;"> Your Memory</h1><br>
+               
+                  <label style="float: left; width: 150%;font-size: 18px;">Words</label>
+                  <input type="text" class="form-control" id="title" placeholder="Enter your words" required />
+               
+                  <label for="category" style="font-size: 18px;"> Choose your Category :</label><br>
+                  <select  name="category" class="form-control" id="category" >
+                     <option value="Colour">Colour</option>
+                     <option value="Number">Number</option>
+                     <option value="Family">Family</option>
+                     <option value="Fruit and Vegetable">Fruit and Vegetable</option>
+                  </select>
+                  <br>
+                  <br>
+
+               <div class="form-group" style="text-align: center;">
+                  <button type="submit" class="btn btn-success">Save Memory</button>&nbsp;&nbsp;
+                  <button type="reset" class="btn btn-primary">Reset</button>
+               </div>
+
+            </form>
+      </div>
+
+
+      <!--div edit memory form - divmemory-->
+      <div class="well" id="divEditMemory" style="overflow-x:auto; background-color: rgb(183, 219, 251);">
+         <div>
+            <form id="frmEditMemory" >
+               <h1 style="text-align: center; font-weight: 900;"> Your Memory</h1><br>
+
+               <label style="float: left; width: 150%;font-size: 18px;">Words</label>
+               <input type="text" class="form-control" id="title100" placeholder="Enter your words" required />
+            
+               <label for="category100" style="font-size: 18px;"> Choose your Category :</label><br>
+               <select  name="category100" class="form-control" id="category100" >
+                  <option value="Colour">Colour</option>
+                  <option value="Number">Number</option>
+                  <option value="Family">Family</option>
+                  <option value="Fruit and Vegetable">Fruit and Vegetable</option>
+               </select>
+               <br>
+               <br>
+            <div class="form-group" style="text-align: center;">
+               <input type="hidden" id="id"/>
+                  <button type="submit" class="btn btn-success">Update Memory</button>
+                  <button type="reset" class="btn btn-info">Reset</button>
+            </div>
+            </form>
+         </div>
+      </div>
+
+      <!-- about-->
+      <div class="well" id="divAbout" style="display: none;">
+         <iv class="row">
+            <div class="col-md-6" style="float: none; margin: 0 auto;text-align: center;">
+               <h1 style=" font-weight: 900;">About Us</h1>
+               <p style=" text-align: justify; font-size: 25px;">want you learn Japanese with correct pronunciation?
+                  Learning the correct
+                  way to pronounce
+                  the Japanese words can help you to understand Japanese more. In this app we are focusing on learning
+                  about Family, Numbers,
+                  Colours, Fruit and Vegetables</p>
+               <br><br>
+
+               <h1 style=" font-weight: 900;">AIM</h1>
+               <p style="text-align: justify; font-size: 25px;">Our aim is to let anyone from everywhere to be able to
+                  learn basic
+                  Japanese with correct pronunciation.
+                  With this, users can talk basic Japanese freely without having to worried about their pronunciation
+                  during their conversation.
+               </p>
+            </div>
+      </div>
+
+      <!-- divProfile-->
+      <div class="well" id="divProfile" style="overflow-x:auto;">
+         <div class="row">
+            <div class="col-sm-6" style="float: none; margin: 0 auto;text-align: center;">
+               <h1 style=" font-weight: 900;">Profile</h1><br>
+               <table class="table table-condensed table-stripped table-hover" id="tblProfile">
+                  <thead>
+                     <tr>
+                        <th>Email</th>
+                        <th>Password</th>
+                     </tr>
+                  </thead>
+                  <tbody></tbody>
+               </table>
+            </div>
+         </div>
+      </div>
+
+
+      <!-- nav-->
+      <nav class="navbar navbar-default navbar-fixed-bottom">
+         <div class="container">
+            <!--div class="well"-->
+            <div class="row">
+               <div class="col-md-12" style="text-align: center;">
+                  Copyright &copy; 2021 fatin-shalu
+               </div>
+            </div>
+         </div>
+   </div>
+   </div>
+   </nav>
+
+   <script src="js/jquery-3.2.1.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+   <script src="js/signals.min.js"></script>
+   <script src="js/hasher.min.js"></script>
+   <script src="js/crossroads.min.js"></script>
+   <script src="js/bootbox.min.js"></script>
+   <script src="js/index.js"></script>
+   <script>
+      //button colour
+      var Colour = new Audio();
+      Colour.src = "voice/Colour.mp3";
+
+      var Orange = new Audio();
+      Orange.src = "voice/Orange.mp3";
+
+      var Blue = new Audio();
+      Blue.src = "voice/Blue.mp3";
+
+      var Yellow = new Audio();
+      Yellow.src = "voice/Yellow.mp3";
+
+      var Red = new Audio();
+      Red.src = "voice/Red.mp3";
+
+      var Green = new Audio();
+      Green.src = "voice/Green.mp3";
+
+      var Black = new Audio();
+      Black.src = "voice/Black.mp3";
+
+      var Brown = new Audio();
+      Brown.src = "voice/Brown.mp3";
+
+      var Pink = new Audio();
+      Pink.src = "voice/Pink.mp3";
+
+      var White = new Audio();
+      White.src = "voice/White.mp3";
+
+      var Purple = new Audio();
+      Purple.src = "voice/Purple.mp3";
+
+      //button number
+      var Numberpro = new Audio();
+      Numberpro.src = "voice/Number.mp3";
+
+      var One = new Audio();
+      One.src = "voice/1.mp3";
+
+      var Two = new Audio();
+      Two.src = "voice/2.mp3";
+
+      var Three = new Audio();
+      Three.src = "voice/3.mp3";
+
+      var Four = new Audio();
+      Four.src = "voice/4.mp3";
+
+      var Five = new Audio();
+      Five.src = "voice/5.mp3";
+
+      var Six = new Audio();
+      Six.src = "voice/6.mp3";
+
+      var Seven = new Audio();
+      Seven.src = "voice/7.mp3";
+
+      var Eight = new Audio();
+      Eight.src = "voice/8.mp3";
+
+      var Nine = new Audio();
+      Nine.src = "voice/9.mp3";
+
+      var Ten = new Audio();
+      Ten.src = "voice/10.mp3";
+
+      //button family
+      var Family = new Audio();
+      Family.src = "voice/Family.mp3";
+
+      var Grandfather = new Audio();
+      Grandfather.src = "voice/Grandfather.mp3";
+
+      var Grandmother = new Audio();
+      Grandmother.src = "voice/Grandmother.mp3";
+
+      var Father = new Audio();
+      Father.src = "voice/Father.mp3";
+
+      var Mother = new Audio();
+      Mother.src = "voice/Mother.mp3";
+
+      var ElderBrother = new Audio();
+      ElderBrother.src = "voice/Elderbrother.mp3";
+
+      var ElderSister = new Audio();
+      ElderSister.src = "voice/Eldersister.mp3";
+
+      var YoungerBrother = new Audio();
+      YoungerBrother.src = "voice/Youngbrother.mp3";
+
+      var YoungerSister = new Audio();
+      YoungerSister.src = "voice/Youngsister.mp3";
+
+      var Son = new Audio();
+      Son.src = "voice/Son.mp3";
+
+      var Daughter = new Audio();
+      Daughter.src = "voice/Daughter.mp3";
+
+      //button fruit
+      var FruitandVegetable = new Audio();
+      FruitandVegetable.src = "voice/Fruit & Veg.mp3";
+
+      var Watermelon = new Audio();
+      Watermelon.src = "voice/Watermelon.mp3";
+
+      var Apple = new Audio();
+      Apple.src = "voice/Apple.mp3";
+
+      var Coconut = new Audio();
+      Coconut.src = "voice/Coconut.mp3";
+
+      var Grape = new Audio();
+      Grape.src = "voice/Grape.mp3";
+
+      var Peach = new Audio();
+      Peach.src = "voice/Peach.mp3";
+
+      var Onion = new Audio();
+      Onion.src = "voice/Onion.mp3";
+
+      var Pumpkin = new Audio();
+      Pumpkin.src = "voice/Pumpkin.mp3";
+
+      var Carrot = new Audio();
+      Carrot.src = "voice/Carrot.mp3";
+
+      var Potato = new Audio();
+      Potato.src = "voice/Potato.mp3";
+
+      var Cucumber = new Audio();
+      Cucumber.src = "voice/Cucumber.mp3";
+
+     
+   </script>
+</body>
+</html>
